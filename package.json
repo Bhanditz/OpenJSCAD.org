@@ -19,7 +19,9 @@
     "postversion": "git push origin master && git push origin master --tags",
     "release-patch": "git checkout master; npm version patch",
     "release-minor": "git checkout master; npm version minor",
-    "release-major": "git checkout master; npm version major"
+    "release-major": "git checkout master; npm version major",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "contributors": [
     {
@@ -46,7 +48,8 @@
     "estraverse": "^4.2.0",
     "brace": "0.10.0",
     "most-gestures": "^0.2.0",
-    "webworkify": "^1.4.0"
+    "webworkify": "^1.4.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "ava": "^0.19.1",
@@ -64,5 +67,6 @@
       "browserify-shim"
     ]
   },
-  "browserify-shim": {}
+  "browserify-shim": {},
+  "snyk": true
 }
